@@ -1,0 +1,8 @@
+/gate/actor/addActor EnergySpectrumActor Ps-1sActor
+/gate/actor/Ps-1sActor/addFilter particleFilter
+# /gate/actor/Ps-1sActor/attachTo S1
+/gate/actor/Ps-1sActor/particleFilter/addParticle pPs
+/gate/actor/Ps-1sActor/energySpectrum/setEmin 0 eV
+/gate/actor/Ps-1sActor/energySpectrum/setEmax 1 MeV
+/gate/actor/Ps-1sActor/energySpectrum/setNumberOfBins 300
+/gate/actor/Ps-1sActor/save {ACTOR_OUTPUT_PATH}/Ps-1sActor.root

@@ -1,0 +1,8 @@
+/gate/actor/addActor EnergySpectrumActor electronActor1
+/gate/actor/electronActor1/addFilter particleFilter
+/gate/actor/electronActor1/attachTo D1
+/gate/actor/electronActor1/particleFilter/addParticle e-
+/gate/actor/electronActor1/energySpectrum/setEmin 0 eV
+/gate/actor/electronActor1/energySpectrum/setEmax 1 MeV
+/gate/actor/electronActor1/energySpectrum/setNumberOfBins 300
+/gate/actor/electronActor1/save {ACTOR_OUTPUT_PATH}/electronActor1.root

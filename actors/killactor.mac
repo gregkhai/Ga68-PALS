@@ -1,0 +1,5 @@
+/gate/actor/addActor KillActor MyActor
+/gate/actor/MyActor/save output/KillActor.txt
+/gate/actor/MyActor/attachTo kill_ring
+/gate/actor/MyActor/addFilter particleFilter
+/gate/actor/MyActor/particleFilter/addParticle gamma

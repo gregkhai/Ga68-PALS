@@ -1,0 +1,13 @@
+/gate/distributions/name energy_distrib
+/gate/distributions/insert Gaussian
+/gate/distributions/energy_distrib/setMean 450 keV
+/gate/distributions/energy_distrib/setSigma 1 keV
+
+/gate/distributions/name dt_distrib
+/gate/distributions/insert Exponential
+/gate/distributions/dt_distrib/setLambda 7.57 mus
+/gate/digitizer/Singles/insert noise
+/gate/digitizer/Singles/noise/setDeltaTDistribution dt_distrib
+/gate/digitizer/Singles/noise/setEnergyDistribution energy_distrib
+
+#from examples, event_ID=-2 are noise events

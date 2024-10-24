@@ -1,0 +1,23 @@
+/gate/actor/addActor EnergySpectrumActor positronWorld
+/gate/actor/positronWorld/addFilter particleFilter
+/gate/actor/positronWorld/particleFilter/addParticle e+
+/gate/actor/positronWorld/energySpectrum/setEmin 0 eV
+/gate/actor/positronWorld/energySpectrum/setEmax 0.5 MeV
+/gate/actor/positronWorld/energySpectrum/setNumberOfBins 300
+/gate/actor/positronWorld/save {ACTOR_OUTPUT_PATH}/positronWorld.root
+
+/gate/actor/addActor EnergySpectrumActor electronWorld
+/gate/actor/electronWorld/addFilter particleFilter
+/gate/actor/electronWorld/particleFilter/addParticle e-
+/gate/actor/electronWorld/energySpectrum/setEmin 0 eV
+/gate/actor/electronWorld/energySpectrum/setEmax 1 MeV
+/gate/actor/electronWorld/energySpectrum/setNumberOfBins 300
+/gate/actor/electronWorld/save {ACTOR_OUTPUT_PATH}/electronWorld.root
+
+/gate/actor/addActor EnergySpectrumActor gammaWorld
+/gate/actor/gammaWorld/addFilter particleFilter
+/gate/actor/gammaWorld/particleFilter/addParticle gamma
+/gate/actor/gammaWorld/energySpectrum/setEmin 0 eV
+/gate/actor/gammaWorld/energySpectrum/setEmax 1 MeV
+/gate/actor/gammaWorld/energySpectrum/setNumberOfBins 300
+/gate/actor/gammaWorld/save {ACTOR_OUTPUT_PATH}/gammaWorld.root

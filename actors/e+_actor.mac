@@ -1,0 +1,8 @@
+/gate/actor/addActor EnergySpectrumActor positronActor1
+/gate/actor/positronActor1/attachTo D1
+/gate/actor/positronActor1/addFilter particleFilter
+/gate/actor/positronActor1/particleFilter/addParticle e+
+/gate/actor/positronActor1/energySpectrum/setEmin 0 eV
+/gate/actor/positronActor1/energySpectrum/setEmax 0.5 MeV
+/gate/actor/positronActor1/energySpectrum/setNumberOfBins 300
+/gate/actor/positronActor1/save {ACTOR_OUTPUT_PATH}/positronActor1.root

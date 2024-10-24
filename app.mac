@@ -1,0 +1,6 @@
+# /gate/application/setTotalNumberOfPrimaries 1e2
+/gate/application/setTimeSlice     10.  s
+/gate/application/setTimeStart     0.  s
+/gate/application/setTimeStop      500.  s
+
+/gate/application/startDAQ

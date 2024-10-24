@@ -1,0 +1,8 @@
+/gate/actor/addActor EnergySpectrumActor gammaActor1
+# /gate/actor/gammaActor1/attachTo 
+/gate/actor/gammaActor1/addFilter particleFilter
+/gate/actor/gammaActor1/particleFilter/addParticle gamma
+/gate/actor/gammaActor1/energySpectrum/setEmin 0 eV
+/gate/actor/gammaActor1/energySpectrum/setEmax 1 MeV
+/gate/actor/gammaActor1/energySpectrum/setNumberOfBins 300
+/gate/actor/gammaActor1/save {ACTOR_OUTPUT_PATH}/gammaActor1.root

@@ -1,0 +1,46 @@
+
+/gate/geometry/setMaterialDatabase ../GateMaterials.db
+
+/control/alias ACTOR_OUTPUT_PATH "output/actors"
+/control/alias ACTOR_PATH "actors"
+/control/alias SOURCE_PATH "sources"
+
+/control/execute geometry/geometry.mac
+# /control/execute geometry/phantom.mac
+
+# /control/execute actors/main_actors.mac
+/control/execute physics.mac
+
+# INITIALIZE
+/gate/run/initialize
+
+/control/execute digitizer.mac
+
+# /control/execute noise.mac
+
+/control/execute sources/main_source.mac
+
+#what do?
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+
+/gate/output/root/enable
+/gate/output/root/setFileName output/name
+/gate/output/root/setRootHitFlag 0
+/gate/output/root/setRootSinglesFlag 1
+
+
+
+#   R A N D O M
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed default
+/gate/random/setEngineSeed auto
+# /gate/random/setEngineSeed 123456789
+/gate/random/verbose 1
+
+# /control/execute visu.mac
+#
+/control/execute app.mac
+
+

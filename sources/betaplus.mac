@@ -1,0 +1,14 @@
+#====================betaplus=================================
+# point source
+#=====================================================
+/gate/source/addSource betaplus
+/gate/source/betaplus/setActivity 10000 Bq
+/gate/source/betaplus/gps/pos/centre 0 0 0 cm
+/gate/source/betaplus/gps/particle e+
+/gate/source/betaplus/gps/type Point
+/gate/source/betaplus/gps/ang/type iso
+/gate/source/betaplus/gps/energy 200. keV
+# /gate/source/betaplus/gps/number 1
+
+# /gate/source/sourceA/setForcedUnstableFlag true
+# /gate/source/sourceA/setForcedHalfLife 6586 s

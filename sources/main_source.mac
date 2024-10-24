@@ -1,0 +1,10 @@
+# /control/execute {SOURCE_PATH}/betaplus.mac
+/control/execute {SOURCE_PATH}/pPs_decay.mac
+# /control/execute {SOURCE_PATH}/pPs_two_source.mac
+# /control/execute {SOURCE_PATH}/noise.mac
+/control/execute {SOURCE_PATH}/Ga68_gammas.mac
+
+
+
+
+# /gate/source/list

@@ -1,0 +1,23 @@
+
+# /gate/source/addsource Ga68
+# /gate/source/Ga68/gps/particle gamma
+# /gate/source/Ga68/gps/energytype UserSpectrum
+# /gate/source/Ga68/gps/setSpectrumFile ../data/DiscreteSpectrum.txt
+# /gate/source/Ga68/setIntensity 1
+# /gate/source/Ga68/setForcedUnstableFlag true
+# /gate/source/Ga68/setForcedHalfLife 4080 s
+# /gate/source/Ga68/setActivity 1.0 MBq
+
+# /gate/source/addSource sourceB Extended
+# # /gate/source/sourceA/gps/type Point
+# /gate/source/sourceB/gps/pos/type Volume
+# /gate/source/sourceB/gps/shape Sphere
+# /gate/source/sourceB/gps/radius 0.625 cm
+# /gate/source/sourceB/gps/pos/centre 0 0 0 cm
+# /gate/source/sourceB/setActivity 76.0 MBq
+# # Definie which positronium decay use in the simulation
+# /gate/source/sourceB/setType pPs
+# # Set enable emission of deexcitation gamma ( prompt gamma ) and its energy
+
+# /gate/source/sourceB/setEnableDeexcitation false
+# /gate/source/sourceB/setPostroniumLifetime pPs 0.125 ns

@@ -1,0 +1,19 @@
+
+#ACTORS
+# /gate/actor/addActor SimulationStatisticActor MyActor
+# /gate/actor/MyActor/save {ACTOR_OUTPUT_PATH}/SimStat.txt
+# /control/execute {ACTOR_PATH}/Ps_1s_actor.mac
+
+/control/execute {ACTOR_PATH}/killactor.mac
+
+
+# /control/execute {ACTOR_PATH}/worldactors.mac
+# /control/execute {ACTOR_PATH}/e+_actor.mac
+# /control/execute {ACTOR_PATH}/e-actor.mac
+# /control/execute {ACTOR_PATH}/gmactor.mac
+# /control/execute {ACTOR_PATH}/doseactor.mac
+
+# /gate/actor/addActor SecondaryProductionActor Secondary
+# /gate/actor/Secondary/save {ACTOR_OUTPUT_PATH}/Secondary_particles.root
+# /gate/actor/Secondary/attachTo S1
+

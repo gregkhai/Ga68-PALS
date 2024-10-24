@@ -1,0 +1,20 @@
+#	D I G I T I Z E R 
+#adder integrates energy from all processes in a hit since the electronics measure this
+/gate/digitizer/Singles/insert adder
+/gate/digitizer/Singles/insert readout
+/gate/digitizer/Singles/readout/setDepth 1
+
+
+/gate/digitizer/Singles/insert timeResolution
+/gate/digitizer/Singles/timeResolution/setTimeResolution 0.3 ns
+
+#gaussian blurring is responsible for the distribution in the energy
+# /gate/digitizer/Singles/insert blurring
+# /gate/digitizer/Singles/blurring/setResolution 0.15
+# /gate/digitizer/Singles/blurring/setEnergyOfReference 511. keV
+
+
+/gate/digitizer/Singles/insert thresholder
+/gate/digitizer/Singles/thresholder/setThreshold 0. keV
+/gate/digitizer/Singles/insert upholder
+/gate/digitizer/Singles/upholder/setUphold 1050. keV

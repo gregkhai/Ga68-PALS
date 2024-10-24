@@ -1,0 +1,68 @@
+##################################################################
+#     W O R L D 
+/gate/world/geometry/setXLength 10. cm
+/gate/world/geometry/setYLength 10. cm
+/gate/world/geometry/setZLength 10. cm
+##################################################################
+#	BOX
+/gate/world/daughters/name PETscanner
+/gate/world/daughters/insert box
+/gate/PETscanner/geometry/setXLength 10. cm
+/gate/PETscanner/geometry/setYLength 10. cm
+/gate/PETscanner/geometry/setZLength 10. cm
+/gate/PETscanner/setMaterial Vacuum
+
+
+/gate/PETscanner/daughters/name scintillator
+/gate/PETscanner/daughters/insert cylinder
+/gate/scintillator/placement/setTranslation -2.57 0.0 0.0 cm
+/gate/scintillator/geometry/setRmax  2.026 cm
+/gate/scintillator/geometry/setRmin 0. cm
+/gate/scintillator/geometry/setHeight 2.54 cm
+/gate/scintillator/setMaterial Scinti-C9H10
+# /gate/scintillator/setMaterial NaI
+/gate/scintillator/vis/setVisible 1
+/gate/scintillator/vis/forceSolid 1
+
+/gate/scintillator/placement/setRotationAxis 0 1 0
+/gate/scintillator/placement/setRotationAngle 90 deg
+
+#	R E P E A T HEAD
+/gate/scintillator/repeaters/insert ring
+/gate/scintillator/ring/setRepeatNumber 2
+/gate/scintillator/ring/setAngularSpan 180 deg
+
+
+/gate/systems/PETscanner/level1/attach scintillator
+/gate/scintillator/attachCrystalSD
+
+# /gate/world/daughters/name water_sphere
+# /gate/world/daughters/insert sphere
+# /gate/water_sphere/geometry/setRmax 0.625 cm
+# /gate/water_sphere/placement/setTranslation 0.0 0.0 0.0 cm
+# /gate/water_sphere/setMaterial Water
+# /gate/water_sphere/vis/setVisible 1
+# /gate/water_sphere/vis/forceSolid 1
+
+/gate/world/daughters/name water_cyl
+/gate/world/daughters/insert cylinder
+/gate/water_cyl/geometry/setRmax  0.625 cm
+/gate/water_cyl/geometry/setRmin 0. cm
+/gate/water_cyl/geometry/setHeight 2.0 cm
+/gate/water_cyl/placement/setTranslation 0.0 0.0 0.0 cm
+/gate/water_cyl/setMaterial Water
+/gate/water_cyl/vis/setVisible 1
+/gate/water_cyl/vis/forceSolid 1
+
+
+# /gate/world/daughters/name kill_ring
+# /gate/world/daughters/insert cylinder
+# /gate/kill_ring/geometry/setRmax  3 cm
+# /gate/kill_ring/geometry/setRmin 2.026 cm
+# /gate/kill_ring/geometry/setHeight 10 cm
+# /gate/kill_ring/placement/setTranslation 0.0 0.0 0.0 cm
+# /gate/kill_ring/placement/setRotationAxis 0 1 0
+# /gate/kill_ring/placement/setRotationAngle 90 deg
+# /gate/kill_ring/setMaterial Vacuum
+# /gate/kill_ring/vis/setVisible 0
+# /gate/kill_ring/vis/forceSolid 1
